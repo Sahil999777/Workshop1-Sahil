@@ -1,0 +1,270 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+*{
+	transition: 0.3s ease;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+	background: #eef2f3;
+	color: #333;
+	line-height: 1.6;
+	padding: 0.1rem;
+}
+
+header{
+	text-align: center;
+	background: linear-gradient(135deg, #4da0b0, #d39d38);
+	color: white;
+	padding: 40px 20px;
+	margin-bottom: 1rem;
+	border-radius: 0 0 12px 12px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+	font-size: 2.8rem;
+	margin-bottom: 0.5rem;
+	letter-spacing: 1px;
+}
+
+header p{
+	font-size: 1.2rem;
+	margin-top: 8px;
+	opacity: 0.9;
+}
+
+nav{
+	background: whitesmoke;
+	padding: 10px 0;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+
+}
+nav ul{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 25px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #4da0b0;
+	font-weight: 600;
+	padding: 8px 12px;
+	border-radius: 25px;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+	background: #4da0b0;
+	color: white;
+	transform: scale(1.07);
+	box-shadow: 0 3px 10px rgba(77,160,176,0.4);
+}
+
+main {
+	width: 85%;
+	margin: 40px auto;
+}
+
+section{
+	background: white;
+	padding: 25px;
+	margin-bottom: 35px;
+	border-radius: 12px;
+	box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+	transition: 0.3 ease;
+}
+
+section:hover {
+	transform: scale(1.02);
+	box-shadow: 0 8px 20px rgba(77,160,176,0.25);
+}
+
+section h2{
+	margin-bottom: 15px;
+	font-size: 1.8rem;
+	color: #4da0b0;
+	border-left: 5px solid #4da0b0;
+	padding-left: 10px;
+}
+
+.about-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 20px 0;
+}
+
+.about-container .left {
+	flex: 1;
+	min-width: 250px;
+	text-align: left;
+	font-size: 1.1rem;
+}
+
+.about-container .left p {
+	background-color: #f0f8ff;
+	padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.about-container .left p:hover {
+	background-color: #4da0b0;
+	color: white;
+	transform: translateX(5px);
+}
+
+.about-container .right {
+	flex: 1;
+	min-width: 250px;
+	text-align: center;
+}
+
+.about-container .right .photobox img{
+	width: 220px;
+	height: 220px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid #4da0b0;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+	transition: 0.3s;
+}
+
+.about-container .right .photobox img:hover{
+	transform: scale(1.08) rotate(2deg);
+}
+
+#about h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #4da0b0;
+    border-left: 5px solid #4da0b0;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .left {
+        text-align: center;
+    }
+}
+
+#hobbies ul,
+#projects ul{
+	list-style-type: square;
+	padding-left: 25px;
+}
+
+#Hobbies ul li {
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#Hobbies ul li:hover {
+    background-color: #4da0b0;
+    color: white;
+    transform: translateX(5px);
+}
+
+.about-container .left p,
+#Hobbies ul li {
+    transition: all 0.3s ease;
+}
+
+#Projects img{
+	width: 150px;
+	height: auto;
+	margin-right: 10px;
+	border-radius: 12px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+	vertical-align: middle;
+	padding: 20px;
+	transition: 0.3s;
+}
+
+#Projects img:hover{
+	transform: scale(1.1);
+	box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+form label{
+	font-weight: 600;
+}
+
+form input,
+form textarea {
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #bbb;
+	outline: none;
+	transition: 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+	border-color: #4da0b0;
+	box-shadow: 0 0 6px rgba(77,160,176,0.5);
+}
+
+form button{
+	padding: 12px;
+	border: none;
+	background: #4da0b0;
+	color: white;
+	border-radius: 8px;
+	cursor: pointer;
+	margin-top: 10px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+form button:hover{
+	background: #3b7e8a;
+	transform: translateY(-2px);
+}
+
+button{
+	background: linear-gradient(135deg, #4da0b0, #d39d38);
+}
+
+footer {
+	text-align: center;
+	background: #4da0b0;
+	color: white;
+	padding: 18px 0;
+	margin-top: 40px;
+	border-radius: 12px 12px 0 0;
+	letter-spacing: 1px;
+}
